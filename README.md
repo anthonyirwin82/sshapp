@@ -26,7 +26,7 @@ Restart=on-failure
 WantedBy=multi-user.target
 ```
 
-You can tune the values below, and once you're happy with them, you can run:
+To make the service run via SystemD
 
 ```bash
 # need to run this every time you change the unit file
@@ -34,4 +34,7 @@ sudo systemctl daemon-reload
 
 # start/restart/stop/etc:
 sudo systemctl start myapp
+
+# to load the sshapp server when the server boots/reboots
+sudo systemctl enable myapp
 ```
